@@ -28,7 +28,7 @@ export const ChallengesContext = createContext({} as ChallengesContextData);
 
 export function ChallengesProvider({ children }: ChallengesProviderProps) {
 
-    const [level, setLevel ] = useState(1);
+    const [level, setLevel] = useState(1);
 
     const [currentExperience, setCurrentExperience] = useState(0);
 
@@ -37,7 +37,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     const [activeChallenge, setActiveChallenge] = useState(null);
 
 
-    const experienceToNextLevel = Math.pow((level+1) * 4, 2);
+    const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
     useEffect(() => {
         Notification.requestPermission();
@@ -50,23 +50,23 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     }, [level, currentExperience, challengesCompleted]);
 
     function levelUp() {
-        setLevel(level +1);
+        setLevel(level + 1);
     }
 
     function startNewChallenge() {
-       const randomChallengeIndex = Math.floor(Math.random() * challenges.length);
+        const randomChallengeIndex = Math.floor(Math.random() * challenges.length);
 
-       const challenge = challenges[randomChallengeIndex];
+        const challenge = challenges[randomChallengeIndex];
 
-       setActiveChallenge(challenge);
+        setActiveChallenge(challenge);
 
-       new Audio('/notification.mp3').play();
+        new Audio('/notification.mp3').play();
 
-       if(Notification.permission === 'granted') {
-           new Notification('Novo desafio ', { 
-               body: `Valendo ${challenge.amount} xp`
-           });
-       }
+        if (Notification.permission === 'granted') {
+            new Notification('Novo desafio ', {
+                body: `Valendo ${challenge.amount} xp`
+            });
+        }
 
     }
 
@@ -76,15 +76,13 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
 
     function completedChallenge() {
 
-        if(!activeChallenge) {
-            return;
-        }
+        if (!activeChallenge) return;
 
         const { amount } = activeChallenge;
 
         let finalExperience = currentExperience + amount;
 
-        if(finalExperience >= experienceToNextLevel) {
+        if (finalExperience >= experienceToNextLevel) {
             finalExperience = finalExperience - experienceToNextLevel;
             levelUp();
         }
@@ -95,7 +93,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     }
 
     return (
-        <ChallengesContext.Provider value={ {level,  currentExperience, experienceToNextLevel, challengesCompleted, levelUp, startNewChallenge, activeChallenge, resetChallenge, completedChallenge} }>
+        <ChallengesContext.Provider value={{ level, currentExperience, experienceToNextLevel, challengesCompleted, levelUp, startNewChallenge, activeChallenge, resetChallenge, completedChallenge }}>
             {children}
         </ChallengesContext.Provider>
     )
