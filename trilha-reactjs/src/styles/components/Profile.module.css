@@ -19,9 +19,17 @@
     color: var(--title);
 }
 
+.profileContainer div strong.title {
+      color: var(--titleDark);
+}
+
 .profileContainer div p {
     font-size: 1rem;
     margin-top: 0.5rem;
+}
+
+.profileContainer div p.titleDark {
+    color: var(--titleDark);
 }
 
 .profileContainer div p img {
