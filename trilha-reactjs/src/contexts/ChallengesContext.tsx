@@ -22,7 +22,10 @@ interface ChallengesContextData {
     completedChallenge: () => void;
 }
 interface ChallengesProviderProps {
-    children: ReactNode
+    children: ReactNode;
+    level: number;
+    currentExperience: number;
+    challengesCompleted: number;
 }
 export const ChallengesContext = createContext({} as ChallengesContextData);
 
