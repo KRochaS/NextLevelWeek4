@@ -30,19 +30,19 @@ interface HomeProps {
 export default function Home({ level, currentExperience, challengesCompleted }: HomeProps) {
     const { isDarkMode, darkMode } = useContext(ThemeContext);
 
-    
-        function handleIsThemeDark() {
-    
-            darkMode();
 
-            console.log(isDarkMode);
-        }
-    
+    function handleIsThemeDark() {
+
+        darkMode();
+
+        console.log(isDarkMode);
+    }
+
     return (
-        
-      
-        <div className={isDarkMode ? stylesdark.geral: ''}>
-             <ChallengesProvider
+
+
+        <div className={isDarkMode ? stylesdark.geral : ''}>
+            <ChallengesProvider
                 level={level}
                 currentExperience={currentExperience}
                 challengesCompleted={challengesCompleted}
@@ -54,7 +54,7 @@ export default function Home({ level, currentExperience, challengesCompleted }: 
 
                     <ExperienceBar />
 
-                    <Switch
+                    {/* <Switch
                         onChange={handleIsThemeDark}
                         checked={isDarkMode === true}
                         checkedIcon={false}
@@ -64,7 +64,10 @@ export default function Home({ level, currentExperience, challengesCompleted }: 
                         handleDiameter={15}
                         offColor="#88898A"
                         onColor="#5EA3DE"
-                    />
+                    /> */}
+
+
+                   
 
                     <CountdownProvider>
                         <section>
@@ -83,8 +86,8 @@ export default function Home({ level, currentExperience, challengesCompleted }: 
 
         </div>
 
-           
-       
+
+
 
     )
 }
