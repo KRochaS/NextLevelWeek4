@@ -33,3 +33,21 @@ span.currentExperience {
     top: 12px;
     transform: translateX(-50%);
 }
+
+span.currentExperienceDark {
+    position: absolute;
+    top: 12px;
+    transform: translateX(-50%);
+    color: var(--white);
+}
+
+.experienceBar button {
+    border: 0;
+    outline: none;
+    padding-left: 1rem;
+    background-color: transparent;
+}
+
+.textDark {
+    color: var(--white);
+}
