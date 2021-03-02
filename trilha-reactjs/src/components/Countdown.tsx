@@ -1,10 +1,14 @@
 import { useContext, useEffect, useState } from 'react';
 
 import { CountdownContext } from '../contexts/CountdownContext';
+import { ThemeContext } from '../contexts/ThemeContext';
 import styles from '../styles/components/Countdown.module.css';
 
 
 export function Countdown() {
+
+    const { isDarkMode } = useContext(ThemeContext);
+    
     const { minutes, 
             seconds, 
             hasFinished, 
@@ -21,7 +25,7 @@ export function Countdown() {
 	
 
 	return (
-		<div>
+		<div className={isDarkMode ? styles.darkStyle : ''}>
 			<div className={styles.countdownContainer}>
 				<div>
 					<span>{minuteLeft} </span>
