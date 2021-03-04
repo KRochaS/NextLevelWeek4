@@ -27,15 +27,14 @@ exercícios físicos. Podendo o usuário ganhar XP para subir de nível.
   <img src="https://github.com/KRochaS/NextLevelWeek4/blob/master/github/moveit%20-%20Inicial.PNG" width="986" >
   <img src="https://github.com/KRochaS/NextLevelWeek4/blob/master/github/moveit%20-%20novo%20desafio.png" width="986" >
   <img src="https://github.com/KRochaS/NextLevelWeek4/blob/master/github/moveit%20-%20novo%20level.PNG"  width="986" >
-   <img src="https://github.com/KRochaS/NextLevelWeek4/blob/master/github/moveit%20-%20desafios%20completos%20e%20barra%20xp.PNG"  width="986" >
-
-  
 </p>
 
-## :computer: Layout Dark Mode (Em Desenvolvimento)
+## :computer: Layout Dark Mode
 
 <p align="center">
-   <img src="https://github.com/KRochaS/NextLevelWeek4/blob/master/github/moveit%20-%20darkMode.png"  width="986" >
+   <img src="https://github.com/KRochaS/NextLevelWeek4/blob/master/github/dark-mode-1.PNG"  width="986" >
+   <img src="https://github.com/KRochaS/NextLevelWeek4/blob/master/github/dark-mode-2.PNG"  width="986" >
+  <img src="https://github.com/KRochaS/NextLevelWeek4/blob/master/github/dark-mode-3.PNG"  width="986" >
 
 </p>
 
