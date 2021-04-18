@@ -1,5 +1,12 @@
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/KRochaS/NextLevelWeek4/743e2fb531ec8b506ea615006f8bf98828f8fe3a/github/moveit-blue.svg" width="250" >
+  <img src="https://raw.githubusercontent.com/KRochaS/NextLevelWeek4/0db7a1af337f3772727d864c88251846d8fd3c63/github/Trilha%20ReactJS.svg" width="350" >
+</p>
+
+<br/>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/KRochaS/NextLevelWeek4/743e2fb531ec8b506ea615006f8bf98828f8fe3a/github/moveit-blue.svg" width="220" >
 </p>
 
 <p align="center">	
@@ -37,4 +44,44 @@ exercícios físicos. Podendo o usuário ganhar XP para subir de nível.
   <img src="https://github.com/KRochaS/NextLevelWeek4/blob/master/github/dark-mode-3.PNG"  width="986" >
 
 </p>
+
+<br/>
+<br/>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/KRochaS/NextLevelWeek4/7cb9e6f3f15f8873568ec3b0f6e17c43223cc698/github/Trilha%20Node.js.svg" width="350" >
+</p>
+
+
+<p align="center">
+   <img src="https://raw.githubusercontent.com/KRochaS/NextLevelWeek4/master/github/projeto-backend.PNG"  width="986" >
+</p>
+
+## :bar_chart: Projeto
+Desenvolvido durante a Next Level Week 4 da Rocketseat ministrado por Dani Evangelista, o projeto consiste em calcular o NPS da empresa.
+Com cadastro de usuários, cadastro de pesquisas, envio de e-mail para os usuários responderem as pesquisas de satisfação e a efetuação do cálculo NPS.
+Aborda conceitos sobre o que é um API, como iniciar um projeto utilizando Typescript e Express para gerenciamento das rotas, TypeORM para manipulação dos dados, testes automatizados e envio de e-mail.
+
+## :books: Tecnologias e ferramentas utilizadas
+
+- [Node.JS](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Ethereal-Email](https://ethereal.email/)
+- [TypeORM](https://typeorm.io/#/)
+- [Express](https://expressjs.com/pt-br/)
+- [Jest](https://jestjs.io/)
+- [SQL Editor Beekeeper Studio](https://www.beekeeperstudio.io/)
+- [Yup](https://github.com/jquense/yup)
+- [Insomnia](https://insomnia.rest/)
+
+
+
+
+
+Você pode importar o Workspace do [Insomnia](https://insomnia.rest/) através do botão abaixo:
+
+<a href="https://insomnia.rest/run/?label=NPS%20API&uri=https%3A%2F%2Fraw.githubusercontent.com/KRochaS/NextLevelWeek4/master/trilha-nodejs/insomnia.json" target="_blank">
+  <img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia">
+</a>
+
 
