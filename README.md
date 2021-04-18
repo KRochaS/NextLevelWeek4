@@ -101,6 +101,9 @@ $ cd trilha-nodejs/
 # Instale as dependências
 $ yarn ou yarn install
 
+# Criar as tabelas no banco
+$ yarn typeorm migration:run
+
 # Execute a aplicação em modo de desenvolvimento
 $ yarn dev
 
