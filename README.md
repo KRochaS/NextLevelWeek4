@@ -63,6 +63,10 @@ exercícios físicos. Podendo o usuário ganhar XP para subir de nível.
    <img src="https://img.shields.io/badge/-TypeORM-8cc84b?style=flat&logoColor=white" />
 </p>
 
+## :bar_chart: Projeto
+Desenvolvido durante a Next Level Week 4 da Rocketseat ministrado por Dani Evangelista, o projeto consiste em calcular o NPS da empresa.
+Com cadastro de usuários, cadastro de pesquisas, envio de e-mail para os usuários responderem as pesquisas de satisfação e a efetuação do cálculo NPS.
+Aborda conceitos sobre o que é um API, como iniciar um projeto utilizando Typescript e Express para gerenciamento das rotas, TypeORM para manipulação dos dados, testes automatizados e envio de e-mail.
 
 
 
@@ -73,13 +77,6 @@ exercícios físicos. Podendo o usuário ganhar XP para subir de nível.
 <p align="center">
    <img src="https://github.com/KRochaS/NextLevelWeek4/blob/master/github/ethereal.PNG?raw=true"  width="986" >
 </p>
-
-
-
-## :bar_chart: Projeto
-Desenvolvido durante a Next Level Week 4 da Rocketseat ministrado por Dani Evangelista, o projeto consiste em calcular o NPS da empresa.
-Com cadastro de usuários, cadastro de pesquisas, envio de e-mail para os usuários responderem as pesquisas de satisfação e a efetuação do cálculo NPS.
-Aborda conceitos sobre o que é um API, como iniciar um projeto utilizando Typescript e Express para gerenciamento das rotas, TypeORM para manipulação dos dados, testes automatizados e envio de e-mail.
 
 ## :books: Tecnologias e ferramentas utilizadas
 
