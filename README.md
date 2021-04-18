@@ -94,7 +94,23 @@ Aborda conceitos sobre o que é um API, como iniciar um projeto utilizando Types
 - [Insomnia](https://insomnia.rest/)
 
 
+## :wrench: Rodar o projeto
 
+```bash
+# Clone este repositório
+$ git clone https://github.com/KRochaS/NextLevelWeek4.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd trilha-nodejs/
+
+# Instale as dependências
+$ yarn ou yarn install
+
+# Execute a aplicação em modo de desenvolvimento
+$ yarn dev
+
+# Server is running!
+```
 
 
 Você pode importar o Workspace do [Insomnia](https://insomnia.rest/) através do botão abaixo:
