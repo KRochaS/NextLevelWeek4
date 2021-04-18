@@ -16,7 +16,7 @@ describe("Surveys", () => {
         await connection.close();
     });
 
-    it("Should be able to create a new servey", async () => {
+    it("Should be able to create a new survey", async () => {
         const response = await request(app).post("/surveys").send({
             title: "Title Example",
             description: "Description Example",
