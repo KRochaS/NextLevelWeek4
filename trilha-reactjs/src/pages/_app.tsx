@@ -3,7 +3,9 @@ import '../styles/global.css';
 import styles from '../styles/globalDark.module.css';
 
 import { ThemeContext, ThemeProvider } from '../contexts/ThemeContext';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
+// import { Login } from './Login';
+import Home from './home';
 
 function MyApp({ Component, pageProps }) {
 
@@ -11,10 +13,17 @@ function MyApp({ Component, pageProps }) {
 
         
         <ThemeProvider>
-            <Component {...pageProps} />
+            <main>
+            <Component  {...pageProps} />
+            </main>
+          {/* <Home /> */}
         </ThemeProvider>
 
-  
+
+
+
+
+
     )
 
 
