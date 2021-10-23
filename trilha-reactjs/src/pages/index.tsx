@@ -1,105 +1,70 @@
-import Head from 'next/head';
-import { GetServerSideProps } from 'next';
-import { ChallengeBox } from '../components/ChallengeBox';
-import { CompletedChallenges } from '../components/CompletedChallenges';
-import { Countdown } from '../components/Countdown';
-import { ExperienceBar } from '../components/ExperienceBar';
-import { Profile } from '../components/Profile';
-import { ChallengesContext, ChallengesProvider } from '../contexts/ChallengesContext';
-import { CountdownProvider } from '../contexts/CountdownContext';
-// import { ThemeProvider } from '../contexts/ThemeContext';
-import styles from '../styles/pages/Home.module.css';
-import Switch from 'react-switch';
-import { useContext } from 'react';
-import { ThemeContext } from '../contexts/ThemeContext';
-
-import stylesdark from '../styles/globalDark.module.css';
 
 
+import styles from '../styles/pages/Login.module.css';
+import Link from 'next/link';
+import { useState } from 'react';
+import { useRouter } from 'next/router'
 
+export default function Login() {
+    const router = useRouter()
 
-interface HomeProps {
-    level: number
-    currentExperience: number
-    challengesCompleted: number
-}
+    const [email, setEmail] = useState(null);
+    const [userName, setUserName] = useState(null);
 
+    function entrarMovit() {
+        localStorage.setItem('email', email);
+        localStorage.setItem('nome', userName);
 
+        router.push('/home');
 
-
-export default function Home({ level, currentExperience, challengesCompleted }: HomeProps) {
-    const { isDarkMode, darkMode } = useContext(ThemeContext);
-
-
-    function handleIsThemeDark() {
-
-        darkMode();
-
-        console.log(isDarkMode);
     }
 
     return (
 
+        <div className={styles.container}>
 
-        <div className={isDarkMode ? stylesdark.geral : ''}>
-            <ChallengesProvider
-                level={level}
-                currentExperience={currentExperience}
-                challengesCompleted={challengesCompleted}
-            >
-                <div className={styles.container}>
-                    <Head>
-                        <title>Inicio | move.it</title>
-                    </Head>
-
-                    <ExperienceBar />
-
-                    {/* <Switch
-                        onChange={handleIsThemeDark}
-                        checked={isDarkMode === true}
-                        checkedIcon={false}
-                        uncheckedIcon={false}
-                        height={10}
-                        width={30}
-                        handleDiameter={15}
-                        offColor="#88898A"
-                        onColor="#5EA3DE"
-                    /> */}
+            <aside>
+                <div>
+                    <img className={styles.image} src="/icons/assets/background.svg" alt="Logo" />
 
 
-                   
-
-                    <CountdownProvider>
-                        <section>
-                            <div>
-                                <Profile />
-                                <CompletedChallenges />
-                                <Countdown />
-                            </div>
-                            <div>
-                                <ChallengeBox />
-                            </div>
-                        </section>
-                    </CountdownProvider>
                 </div>
-            </ChallengesProvider>
+            </aside>
+
+            <div className={"col-12 col-md-6 "}>
+                <main className="d-flex justify-content-center align-items-center h-85">
+                    <div className={styles.mainContent}>
+                        <img src="/icons/assets/Logo-completo.svg" alt="logo" />
+                        <form className={styles.form}>
+                            <input
+                                type="text"
+                                placeholder="Digite seu E-mail"
+                                onChange={event => setEmail(event.target.value)}
+                                value={email}
+
+                            />
+
+                            <input
+                                type="text"
+                                placeholder="Digite o seu Nome"
+                                onChange={event => setUserName(event.target.value)}
+                                value={userName}
+
+                            />
+
+                               
+
+                            <button onClick={() => entrarMovit()} className={email && userName ?  styles.button : styles.disabled} type="button">
+                                Entrar
+                            </button>
+                        </form>
+                    </div>
+                </main>
+            </div>
+
 
         </div>
 
-
-
-
     )
-}
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-    const { level, currentExperience, challengesCompleted } = ctx.req.cookies
-
-    return {
-        props: {
-            level: Number(level),
-            currentExperience: Number(currentExperience),
-            challengesCompleted: Number(challengesCompleted),
-        },
-    }
 }
