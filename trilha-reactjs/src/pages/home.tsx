@@ -1,20 +1,19 @@
-import Head from 'next/head';
 import { GetServerSideProps } from 'next';
+import Head from 'next/head';
+import { useContext } from 'react';
+
 import { ChallengeBox } from '../components/ChallengeBox';
 import { CompletedChallenges } from '../components/CompletedChallenges';
 import { Countdown } from '../components/Countdown';
 import { ExperienceBar } from '../components/ExperienceBar';
 import { Profile } from '../components/Profile';
-import { ChallengesContext, ChallengesProvider } from '../contexts/ChallengesContext';
+import { ChallengesProvider } from '../contexts/ChallengesContext';
 import { CountdownProvider } from '../contexts/CountdownContext';
-// import { ThemeProvider } from '../contexts/ThemeContext';
-import styles from '../styles/pages/Home.module.css';
-import Switch from 'react-switch';
-import { useContext } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
-
 import stylesdark from '../styles/globalDark.module.css';
+import styles from '../styles/pages/Home.module.css';
 
+// import { ThemeProvider } from '../contexts/ThemeContext';
 
 
 
