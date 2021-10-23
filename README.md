@@ -51,10 +51,24 @@ exercícios físicos. Podendo o usuário ganhar XP para subir de nível.
 <p align="center">
   <img src="https://raw.githubusercontent.com/KRochaS/NextLevelWeek4/7cb9e6f3f15f8873568ec3b0f6e17c43223cc698/github/Trilha%20Node.js.svg" width="350" >
 </p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/KRochaS/NextLevelWeek4/776eb241955d1457dc7a8fccfe6d2e003dd3c1ff/github/NPS%20-%20NLW%234-Green.svg" width="160" >
+</p>
 
+<p align="center">	
+   <img src="https://img.shields.io/badge/-NodeJS-8cc84b?style=flat&logoColor=white" />
+  
+   <img src="https://img.shields.io/badge/-Express-8cc84b?style=flat&logoColor=white" />
+   
+   <img src="https://img.shields.io/badge/-TypeORM-8cc84b?style=flat&logoColor=white" />
+</p>
 
 <p align="center">
    <img src="https://raw.githubusercontent.com/KRochaS/NextLevelWeek4/master/github/projeto-backend.PNG"  width="986" >
+</p>
+
+<p align="center">
+   <img src="https://github.com/KRochaS/NextLevelWeek4/blob/master/github/ethereal.PNG?raw=true"  width="986" >
 </p>
 
 ## :bar_chart: Projeto
@@ -75,7 +89,26 @@ Aborda conceitos sobre o que é um API, como iniciar um projeto utilizando Types
 - [Insomnia](https://insomnia.rest/)
 
 
+## :wrench: Rodar o projeto
 
+```bash
+# Clone este repositório
+$ git clone https://github.com/KRochaS/NextLevelWeek4.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd trilha-nodejs/
+
+# Instale as dependências
+$ yarn ou yarn install
+
+# Criar as tabelas no banco
+$ yarn typeorm migration:run
+
+# Execute a aplicação em modo de desenvolvimento
+$ yarn dev
+
+# Server is running!
+```
 
 
 Você pode importar o Workspace do [Insomnia](https://insomnia.rest/) através do botão abaixo:
