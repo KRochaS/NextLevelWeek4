@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import { ChallengesContext } from '../contexts/ChallengesContext';
 import { ThemeContext } from '../contexts/ThemeContext';
@@ -8,13 +8,23 @@ export function Profile() {
 
     const { level } = useContext(ChallengesContext);
     const { isDarkMode } = useContext(ThemeContext);
+
+    const [email, setEmail] = useState(null);
+    const [userName, setUserName] = useState(null);
+
+    useEffect(() => {
+        setEmail(localStorage.getItem('email'));
+        setUserName(localStorage.getItem('nome'));
+    }, []);
+
     
     return (
         <div className={styles.profileContainer}>
-            <img src="https://github.com/KRochaS.png" alt="Karine Rocha" />
-
+            <span>
+                    <p>{ userName && userName[0]} </p>
+            </span>
             <div >
-                <strong className={isDarkMode ? styles.title : ''}> Karine Rocha </strong>
+                <strong className={isDarkMode ? styles.title : ''}> {userName} </strong>
                 <p className={isDarkMode ? styles.titleDark : '' }>
                     <img src="icons/level.svg" alt="level"/>
                     Level {level}
